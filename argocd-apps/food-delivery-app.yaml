@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: food-delivery-app
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/saurav-22/food-delivery-infra-repo.git
+    path: helm-chart
+    targetRevision: HEAD
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: food-app
+
+  syncPolicy:
+    automated:
+      prune: true       # delete removed resources automatically
+      selfHeal: true    # auto-correct manual changes in cluster
+    syncOptions:
+      - CreateNamespace=true

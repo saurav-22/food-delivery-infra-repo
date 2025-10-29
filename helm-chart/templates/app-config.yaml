@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: food-app
+data:
+  DB_NAME: "foodapp"
+  DB_HOST: "food-delivery-app-db.cuc9gqmx86tp.ap-south-1.rds.amazonaws.com"
+  DB_PORT: "5432"
+
+  CART_SERVICE_URL: "http://cart-service:8084"
+  ORDER_SERVICE_URL: "http://order-service:80"
+  MENU_SERVICE_URL: "http://menu-service:8082"

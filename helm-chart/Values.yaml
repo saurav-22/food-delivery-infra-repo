@@ -1,0 +1,37 @@
+namespace: food-app
+
+global:
+  imagePullPolicy: Always
+
+resources:
+  requests:
+    cpu: "50m"
+    memory: "128Mi"
+  limits:
+    cpu: "250m"
+    memory: "256Mi"
+
+serviceType: ClusterIP
+
+# Image repos
+images:
+  restaurantService:
+    repository: "051101197314.dkr.ecr.ap-south-1.amazonaws.com/restaurant-service"
+    tag: "latest"
+    build: "0"
+  menuService:
+    repository: "051101197314.dkr.ecr.ap-south-1.amazonaws.com/menu-service"
+    tag: "latest"
+    build: "0"
+  userService:
+    repository: "051101197314.dkr.ecr.ap-south-1.amazonaws.com/user-service"
+    tag: "latest"
+    build: "0"
+  cartService:
+    repository: "051101197314.dkr.ecr.ap-south-1.amazonaws.com/cart-service"
+    tag: "latest"
+    build: "0"
+  orderService:
+    repository: "051101197314.dkr.ecr.ap-south-1.amazonaws.com/order-service"
+    tag: "latest"
+    build: "0"

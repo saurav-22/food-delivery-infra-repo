@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: menu-service
+  namespace: food-app
+spec:
+  type: ClusterIP
+  selector:
+    app: menu-service
+  ports:
+    - port: 8082
+      targetPort: 8082
