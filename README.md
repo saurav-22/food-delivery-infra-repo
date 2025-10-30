@@ -1,4 +1,4 @@
-# Infrastructure README — infra-repo
+# Infrastructure README - infra-repo
 
 This README supplements the [main project](https://github.com/saurav-22/food-delivery-app-repo) documentation with focused notes for the infrastructure Helm chart and the exact configuration/secret keys used by the deployments.
 
